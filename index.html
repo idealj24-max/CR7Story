@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="CR7Story : le musée numérique de Cristiano Ronaldo. Découvrez ses buts, records, trophées et toute sa carrière.">
+  <title>CR7Story | The Legend</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#home">
+    <span class="brand-mark">CR7</span>
+    <span>STORY</span>
+  </a>
+
+  <div class="header-actions">
+    <select id="languageSelect" aria-label="Language">
+      <option value="fr">FR</option>
+      <option value="en">EN</option>
+      <option value="ar">AR</option>
+    </select>
+    <button id="menuToggle" class="menu-toggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<nav id="mainNav" class="main-nav">
+  <a href="#home" data-i18n="navHome">Accueil</a>
+  <a href="#career" data-i18n="navCareer">Carrière</a>
+  <a href="#goals" data-i18n="navGoals">Buts légendaires</a>
+  <a href="#trophies" data-i18n="navTrophies">Trophées</a>
+  <a href="#records" data-i18n="navRecords">Records</a>
+  <a href="#gallery" data-i18n="navGallery">Galerie</a>
+  <a href="#quiz" data-i18n="navQuiz">Quiz CR7</a>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow" data-i18n="heroEyebrow">
+        THE HISTORY OF A LEGEND
+      </p>
+
+      <h1>CRISTIANO<br><span>RONALDO</span></h1>
+
+      <p class="hero-subtitle" data-i18n="heroSubtitle">
+        Une carrière. Des milliers d'émotions. Une légende éternelle.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#career" class="btn btn-gold" data-i18n="discover">
+          DÉCOUVRIR SON HISTOIRE
+        </a>
+        <a href="#trophies" class="btn btn-outline" data-i18n="viewTrophies">
+          VOIR SES TROPHÉES
+        </a>
+      </div>
+
+      <div class="hero-signature">CR7</div>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <section class="section introduction">
+    <div class="section-heading">
+      <p class="eyebrow">THE LEGEND</p>
+      <h2 data-i18n="introTitle">PLUS QU'UN JOUEUR</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <p class="intro-text" data-i18n="introText">
+      De Madère aux plus grands stades du monde, découvrez le parcours
+      exceptionnel d'un joueur qui a marqué l'histoire du football.
+    </p>
+  </section>
+
+  <!-- STATISTIQUES -->
+  <section class="section stats-section">
+    <div class="section-heading">
+      <p class="eyebrow">THE NUMBERS</p>
+      <h2 data-i18n="statsTitle">UNE CARRIÈRE HISTORIQUE</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div id="statsGrid" class="stats-grid"></div>
+    <p class="data-note" data-i18n="statsNote">
+      Les statistiques sont évolutives et doivent être vérifiées et datées.
+    </p>
+  </section>
+
+  <!-- CARRIÈRE -->
+  <section id="career" class="section dark-section">
+    <div class="section-heading">
+      <p class="eyebrow">THE JOURNEY</p>
+      <h2 data-i18n="careerTitle">LES CHAPITRES D'UNE LÉGENDE</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div id="careerGrid" class="career-grid"></div>
+  </section>
+
+  <!-- BUTS -->
+  <section id="goals" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">UNFORGETTABLE MOMENTS</p>
+      <h2 data-i18n="goalsTitle">LES BUTS LÉGENDAIRES</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="filter-row">
+      <button class="filter-btn active" data-goal-filter="all">Tous</button>
+      <button class="filter-btn" data-goal-filter="club">Clubs</button>
+      <button class="filter-btn" data-goal-filter="national">Portugal</button>
+    </div>
+
+    <div id="goalsGrid" class="content-grid"></div>
+  </section>
+
+  <!-- TROPHÉES -->
+  <section id="trophies" class="section dark-section">
+    <div class="section-heading">
+      <p class="eyebrow">THE COLLECTION</p>
+      <h2 data-i18n="trophiesTitle">LA SALLE DES TROPHÉES</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div id="trophiesGrid" class="trophies-grid"></div>
+  </section>
+
+  <!-- RECORDS -->
+  <section id="records" class="section">
+    <div class="section-heading">
+      <p class="eyebrow">THE RECORDS</p>
+      <h2 data-i18n="recordsTitle">LES RECORDS DE CR7</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div id="recordsGrid" class="records-grid"></div>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="gallery" class="section dark-section">
+    <div class="section-heading">
+      <p class="eyebrow">VISUAL ARCHIVES</p>
+      <h2 data-i18n="galleryTitle">GALERIE DE LA LÉGENDE</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div id="galleryGrid" class="gallery-grid"></div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="section quiz-section">
+    <div class="section-heading">
+      <p class="eyebrow">TEST YOUR KNOWLEDGE</p>
+      <h2 data-i18n="quizTitle">ES-TU UN VRAI EXPERT CR7 ?</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="quiz-box">
+      <div id="quizContent"></div>
+      <button id="nextQuestion" class="btn btn-gold">
+        COMMENCER LE QUIZ
+      </button>
+      <p id="quizScore"></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-logo">CR7<span>STORY</span></div>
+  <p data-i18n="footerText">
+    Un musée numérique dédié à l'histoire de Cristiano Ronaldo.
+  </p>
+  <p class="copyright">
+    © 2026 CR7Story — Fan project indépendant.
+  </p>
+  <p class="disclaimer" data-i18n="disclaimer">
+    Projet non officiel, indépendant et non affilié à Cristiano Ronaldo.
+    Les marques, images et contenus appartiennent à leurs propriétaires respectifs.
+  </p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
